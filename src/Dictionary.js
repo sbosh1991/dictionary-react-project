@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
+import img from "./images/smd.png";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
@@ -24,9 +25,18 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
+    <header className="logo-header">
+  <img src={img} className="img-fluid" alt="logo"/>
+        </header>
+        <section>
+<form onSubmit={search}>
         <input type="search" onChange={handlewordchange} />
       </form>
+      <div className="hint">
+        Suggested keywords: Country, Earth, Dancing, Love...
+      </div>
+        </section>
+      
       <Results results={results} />
     </div>
   );
