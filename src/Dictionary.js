@@ -29,7 +29,8 @@ export default function Dictionary() {
   <img src={img} className="img-fluid" alt="logo"/>
         </header>
         <section>
-<form onSubmit={search}>
+          <h1>What word do you want to look up?</h1>
+       <form onSubmit={search}>
         <input type="search" onChange={handlewordchange} />
       </form>
       <div className="hint">

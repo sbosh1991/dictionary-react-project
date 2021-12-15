@@ -1,0 +1,16 @@
+.Meaning h4{
+    font-size: 28px;
+    font-weight: 500;
+   
+}
+.Meaning .definition{
+   
+}
+
+.Meaning .example {
+font-style: italic;
+opacity: 0.6;
+font-size: 15px;
+font-family: monospace;
+margin-top: 5px;
+}
