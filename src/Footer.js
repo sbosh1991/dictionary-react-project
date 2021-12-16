@@ -7,10 +7,10 @@ export default function Footer() {
     <div className="Footer">
       <footer>
         This was coded by{" "}
-        <a href="https://github.com/sbosh1991/dictionary-react-project">
-       Sbosh{" "}
-        </a>
-        and is open-sourced on Github   <FaGithub className="mb-1"/> 
+        
+      <a href="https://www.instagram.com/simply_green_lee/" target="_blank" rel="noreferrer">Sbosh</a>{" "}
+        and is {" "}
+       <a href="https://github.com/sbosh1991/dictionary-react-project" target="_blank" rel="noreferrer">open-sourced on Github </a>   <FaGithub className="mb-1"/> 
       </footer>
     </div>
   ); 
