@@ -8,5 +8,9 @@
 
 .Footer a{
   text-decoration: none;
-  color: #D8B692;
+  color:  #D8B692;
+}
+
+.Footer a:hover{
+  color:#8d3434 ;
 }

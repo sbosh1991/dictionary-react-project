@@ -13,5 +13,5 @@ export default function Footer() {
         and is open-sourced on Github   <FaGithub className="mb-1"/> 
       </footer>
     </div>
-  );
+  ); 
 }

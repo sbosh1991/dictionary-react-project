@@ -3,21 +3,41 @@ import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
 import img from "./images/smd.png";
+import Photos from "./Photos";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
   let [results, setResults] = useState(null);
+  let [photos, setphotos] = useState(null)
+
+
+
+  function handleresponse(response) {
+    setResults(response.data[0])
+  }
+
+
+  function handlePexelsResponse(response){
+
+    setphotos(response.data.photos)
+  }
 
   function search(event) {
     event.preventDefault();
 
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleresponse);
+
+    const pexelsApiKey = "563492ad6f9170000100000164f2af03569b407ca658f33c4579170b";
+    const pexelApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+   
+     axios.get(pexelApiUrl, { headers: {"Authorization" : `Bearer ${pexelsApiKey}`}, 
+     })
+     .then(handlePexelsResponse);
   }
 
-  function handleresponse(response) {
-    setResults(response.data[0]);
-  }
+
+
 
   function handlewordchange(event) {
     setWord(event.target.value);
@@ -39,6 +59,7 @@ export default function Dictionary() {
         </section>
       
       <Results results={results} />
+      <Photos photos={photos}/>
     </div>
   );
 }

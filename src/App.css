@@ -2,6 +2,7 @@
 body{
     background: #fff4e1 ;
    font-family: Georgia, 'Times New Roman', Times, serif;
+   color:  #6f3826 ;
 }
 
  header{
@@ -9,4 +10,9 @@ body{
   display: block;
   margin: 0 auto;
    
+}
+
+.App {
+  max-width: 950px;
+  margin: 0 auto;
 }
